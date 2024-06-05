@@ -7,51 +7,31 @@ Analysis Report on the Neural Network Model:
 * Tools used:
 
 * Actions performed:
-  * Preprocess the Data using Pandas and scikit-learn’s StandardScaler()
-Read in the charity_data.csv to a Pandas DataFrame, and identified the mandatory varaiables:
+  * Preprocess the Data using Pandas and scikit-learn’s StandardScaler() and identified the mandatory varaiables:
     * target variable: Is_successful
-    * feature variable for my model: 
-Drop the EIN and NAME columns.
-Determine the number of unique values for each column.
-For columns that have more than 10 unique values, determine the number of data points for each unique value.
-Use the number of data points for each unique value to pick a cutoff point to combine "rare" categorical variables together in a new value, Other, and then check if the replacement was successful.
-Use pd.get_dummies() to encode categorical variables.
-Split the preprocessed data into a features array, X, and a target array, y. Use these arrays and the train_test_split function to split the data into training and testing datasets.
-Scale the training and testing features datasets by creating a StandardScaler instance, fitting it to the training data, then using the transform function.
-Step 2: Compile, Train, and Evaluate the Model
+    * feature variable for my model: Remaining attributes besides EIN and Name
+  * Data Preprocessing:
+    * Drop the EIN and NAME columns
+    * For columns that have more than 10 unique values, aggregated values into groups to narrow down the number of unique data attributes
+    * Used pd.get_dummies() to encode categorical variables.
+    * Splited the preprocessed data into a features array, X, and a target array, y, and used the train_test_split function to split the data into training and testing datasets
+    * Scaled the training and testing features datasets by creating a StandardScaler instance, fitting it to the training data, then using the transform function.
+    * Designed a neural network model to create a binary classification model that predicted if an Alphabet Soup-funded organization will be successful based on the features in the dataset and calculate the binary classification model’s loss and accuracy.
+    * Compiled the model, trained the model using training data, and evaluated the Model using testing data to determine the loss and accuracy
+ * Performance of initial model:
+    * <img width="679" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/9d404d85-9aac-43ba-8891-31d1f9e022ae">
 
-Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup-funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
-Continue using the file in Google Colab in which you performed the preprocessing steps from Step 1.
-Create a neural network model by assigning the number of input features and nodes for each layer using TensorFlow and Keras.
-Create the first hidden layer and choose an appropriate activation function.
-If necessary, add a second hidden layer with an appropriate activation function.
-Create an output layer with an appropriate activation function.
-Check the structure of the model.
-Compile and train the model.
-Create a callback that saves the model's weights every five epochs.
-Evaluate the model using the test data to determine the loss and accuracy.
-Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity.h5.
-Step 3: Optimize the Model
-
-Using your knowledge of TensorFlow, optimize your model to achieve a target predictive accuracy higher than 75%.
-Use any or all of the following methods to optimize your model:
-Adjust the input data to ensure that no variables or outliers are causing confusion in the model, such as:
-Dropping more or fewer columns.
-Creating more bins for rare occurrences in columns.
-Increasing or decreasing the number of values for each bin.
-Add more neurons to a hidden layer.
-Add more hidden layers.
+    * Exported the model 
+ * Optimize the Model:
+    * Used TensorFlow, and Kerastuner to adjust the input data to ensure that no variables or outliers are causing confusion in the model
+    * Dropping more columns: Status and Special_Consideration
+    * Added 10 more neurons to a both 2nd hidden layer
+    * Add an additional hidden layer with Sigmoid activation function.
 Use different activation functions for the hidden layers.
-Add or reduce the number of epochs to the training regimen.
-Note: If you make at least three attempts at optimizing your model, you will not lose points if your model does not achieve target performance.
-Create a new Google Colab file and name it AlphabetSoupCharity_Optimization.ipynb.
-Import your dependencies and read in the charity_data.csv to a Pandas DataFrame.
-Preprocess the dataset as you did in Step 1. Be sure to adjust for any modifications that came out of optimizing the model.
-Design a neural network model, and be sure to adjust for modifications that will optimize the model to achieve higher than 75% accuracy.
-Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity_Optimization.h5.
+    * Increased the number of epochs to the training regimen to 100
+* Improved model performance to 0.7301 (73.01%) accuracy:
+  <img width="668" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/ef884ba8-6f61-4a7d-b78e-fefce31a4455">
 
-
-* Performance of initial model:
 
 * Optimization of model:
 Attempt 1: Best Accuracy so far: 0.7359663844108582
