@@ -39,12 +39,13 @@ Use different activation functions for the hidden layers.
   * Optimization of model:
 Attempt 1: Best Accuracy so far: 0.7359663844108582
     * <img width="834" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/dc8e3fe2-bccb-4a99-a644-6603e7c3aa56">
-    * Final optimized model:
+* Final optimized model: Best Accuracy so far: 0.7382988929748535
     * <img width="498" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/4ce4d81a-4e31-4c19-8f49-4a75f70d93fb">
+    * <img width="656" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/8b5f23a1-a27b-412e-8bcf-3194925b3ca3">
 
 
 * Summary:
-  * Via several attempts, the final model could not achieve the 75% accuracy score; however, inched closely towards the positive directly with the various optimization methods.
+  * Via several attempts, the final model could not achieve the 75% accuracy score (reached 73.8% accuracy); however, inched closely towards the positive directly with the various optimization methods.
   * The final model achieved approximately 73.6% accuracy using a deep learning model.
   * For future analysis, a heat map or PCA method can be generated in the data preprocessing phase to help further narrow down the key factors required to fit the classification neural network model properly.
 
