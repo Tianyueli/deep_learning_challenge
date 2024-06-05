@@ -36,10 +36,12 @@ Use different activation functions for the hidden layers.
   * Result: Improved model performance to 0.7301 (73.01%) accuracy:
     * <img width="668" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/ef884ba8-6f61-4a7d-b78e-fefce31a4455">
 
-
   * Optimization of model:
 Attempt 1: Best Accuracy so far: 0.7359663844108582
     * <img width="834" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/dc8e3fe2-bccb-4a99-a644-6603e7c3aa56">
+    * Final optimized model:
+      * <img width="498" alt="image" src="https://github.com/Tianyueli/deep_learning_challenge/assets/42381263/4ce4d81a-4e31-4c19-8f49-4a75f70d93fb">
+
 
 * Summary:
   * Via several attempts, the final model could not achieve the 75% accuracy score; however, inched closely towards the positive directly with the various optimization methods.
